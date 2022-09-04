@@ -31,6 +31,18 @@ body {
 .navbar-dark {
   background-color: #512DA8; }
 
+.modal-dialog {
+  background-color: #512DA8; }
+  .modal-dialog .modal-content .modal-header {
+    background-color: #512DA8;
+    color: floralwhite; }
+    .modal-dialog .modal-content .modal-header .close {
+      color: floralwhite; }
+  .modal-dialog .modal-content .modal-content {
+    background-color: white; }
+  .modal-dialog .modal-body {
+    background-color: #D1C4E9; }
+
 .tab-content {
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;

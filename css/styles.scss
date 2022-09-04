@@ -47,6 +47,29 @@ body {
     background-color: $background-dark;
 }
 
+.modal-dialog {
+    background-color: $background-dark;
+    .modal-content {
+
+        .modal-header {
+            background-color: $background-dark;
+            color: floralwhite;
+
+            .close {
+                color: floralwhite;
+            }
+        }
+
+        .modal-content {
+            background-color: white;
+        }
+    }
+
+    .modal-body {
+        background-color: $background-pale;
+    }
+}
+
 .tab-content {
     border-left: 1px solid $lt-gray;
     border-right: 1px solid $lt-gray;
