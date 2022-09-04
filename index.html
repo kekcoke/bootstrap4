@@ -87,8 +87,8 @@
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
                     <a role="button" class="btn btn-block nav-link btn-warning"
-                        data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
-                        data-placement="bottom" href="#ReserveTable">Reserve Table</a>                </div>
+                        data-toggle="modal" data-target="#reserveTableModal">Reserve Table</a>                
+                </div>
             </div>
         </div>
     </header>
@@ -198,12 +198,15 @@
                 </div>
             </div>
         </div>
-        <div class="row row-content">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <div class="card-body">
+
+        <div id="reserveTableModal" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="content" style="max-width: 720px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="col-12 col-sm-11"><h3>Reserve a Table</h3></div>
+                        <div class="col col-sm" data-dismiss="modal"><i class="fa fa-close"></i></div>
+                    </div>
+                    <div class="modal-body">
                         <form id="ReserveTable">
                             <dl class="row">
                                 <dd class="col-12 col-sm-2">Number of Guests</dd>
@@ -233,6 +236,21 @@
                                 </dd>
                             </dl>
                             <dl class="row">
+                                <dd class="col-12 col-sm-2">Section</dd>
+                                <dd class="col-12 col-sm-10">
+                                    <div class="form-group-row">
+                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                            <label class="btn btn-success active">
+                                              <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                                            </label>
+                                            <label class="btn btn-danger">
+                                              <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                            </label>
+                                          </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="row">
                                 <dd class="col-12 col-sm-2">Date & Time</dd>
                                 <dd class="col-12 col-sm-10">
                                     <div class="form-group row">
@@ -247,6 +265,7 @@
                             <dl class="row">
                                 <dd class="col-12 col-sm-2">&nbsp;</dd>
                                 <dd class="col-12 col-sm-10">
+                                    <button class="btn bg-dark text-white" data-dismiss="modal">Cancel</button>
                                     <button class="btn bg-primary text-white" type="submit">Reserve</button>
                                 </dd>
                             </dl>
@@ -254,7 +273,6 @@
                     </div>
                 </div>
             </div>
-                        <div class="col-sm-2"></div>
 
         </div>
     </div>
@@ -306,11 +324,6 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
 </body>
 
 </html>
